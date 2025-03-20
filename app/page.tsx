@@ -91,7 +91,7 @@ export default function Home() {
       <div className="relative h-screen flex flex-col justify-between">
         {/* Background Image */}
         <Image
-          src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/wp.avif"
           alt="Mountain background"
           fill
           className="object-cover"
@@ -107,10 +107,14 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
-            <h1 className="text-2xl font-bold tracking-wider text-white">
-              <span className="block text-3xl">RUN</span>
-              <span className="text-sm tracking-widest">ALTAS CUMBRES</span>
-            </h1>
+            <Image
+              src="/logo/logo_blanco_doble línea.png"
+              alt="Run Altas Cumbres Logo"
+              width={350}
+              height={175}
+              className="w-auto h-20 md:h-28"
+              priority
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -120,27 +124,11 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="hidden md:block"
           >
-            <ul className="flex space-x-6 text-xs uppercase tracking-wider text-white">
-              <li>
-                <Link href="#" className="hover:text-gray-300 transition-colors">
-                  Inscripción
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-gray-300 transition-colors">
-                  La Carrera
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-gray-300 transition-colors">
-                  Info Importante
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-gray-300 transition-colors">
-                  Contacto
-                </Link>
-              </li>
+            <ul className="flex space-x-6 text-sm uppercase tracking-wider text-white items-center">
+              <li><Link href="#" className="hover:text-gray-300 transition-colors">Inscripción</Link></li>
+              <li><Link href="#" className="hover:text-gray-300 transition-colors">La Carrera</Link></li>
+              <li><Link href="#" className="hover:text-gray-300 transition-colors">Info Importante</Link></li>
+              <li><Link href="#" className="hover:text-gray-300 transition-colors">Contacto</Link></li>
             </ul>
           </motion.nav>
 
@@ -286,11 +274,11 @@ export default function Home() {
               className="w-48 h-48 mb-8 md:mb-0 flex justify-center"
             >
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20negro-nFe7Pcq8rEGTkJLosR0zYEFp4kBnjN.png"
+                src="/logo/logo_negro_horizontal.png"
                 alt="Rotaract Logo"
-                width={200}
-                height={200}
-                className="w-auto h-auto"
+                width={1200}
+                height={1200}
+                className="w-full h-auto max-w-3xl"
               />
             </motion.div>
 
@@ -319,8 +307,7 @@ export default function Home() {
 
       {/* Action Buttons Section */}
       <div className="relative py-16 bg-gray-100">
-        <Image src="/placeholder.svg?height=600&width=1200" alt="Background" fill className="object-cover" />
-        <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-[#52B046]/20"></div>
 
         <motion.section
           initial="hidden"
